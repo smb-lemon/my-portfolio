@@ -3,6 +3,7 @@ import { DATA } from '@/data';
 import Image from 'next/image';
 import Markdown from 'react-markdown';
 import GitHubInfo from '@/components/githubinfo';
+import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
 
 
 function Badge(props: any) {
@@ -133,18 +134,26 @@ export default function Page() {
         {DATA.description}
       </p>
 
-    <div className="flex justify-center my-8">
+    {/* <div className="flex justify-center my-8">
       <div className="relative w-full max-w-md h-60 sm:h-80">
     <Image
-      alt={DATA.images[0].title}
-      src={DATA.images[0].href}
+      alt={DATA.images[0].alt}
+      src={DATA.images[0].src}
       fill
       sizes="(max-width: 768px) 100vw, 50vw"
       priority
       className="rounded-xl object-cover shadow-md"
     />
       </div>
-    </div>
+    </div> */}
+
+      <div className="my-12">
+        <InfiniteMovingCards
+          items={DATA.images}
+          direction="left"
+          speed="slow"
+        />
+      </div>
 
       <div className="prose prose-neutral dark:prose-invert">
       <Markdown className="prose max-w-full prose-neutral  text-muted-foreground dark:prose-invert">
