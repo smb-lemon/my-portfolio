@@ -1,4 +1,3 @@
-import { HoverEffect } from '@/components/contributions-card';
 import { ProjectCard } from '@/components/project-card';
 import Image from 'next/image';
 import { DATA } from '@/data';
@@ -42,17 +41,6 @@ export default function ProjectsPage() {
               </div>
             ))}
           </div>
-          {/* <div className='mb-5 mt-12'>
-          <h2 className="font-medium text-2xl mb-8 tracking-tighter">my contributions to open source world</h2>
-          <div className="prose prose-neutral dark:prose-invert mb-4">
-          <Markdown className="prose prose-neutral dark:prose-invert">
-          {DATA.contributionssummary}
-        </Markdown>
-        </div>
-
-          <HoverEffect items={DATA.contributions} />
-        </div> */}
-
         <h1 className="font-medium text-2xl mt-16 mb-8 tracking-tighter">Idea Contest</h1>
       <div className="prose prose-neutral dark:prose-invert">
       <Markdown className="prose prose-neutral dark:prose-invert">
@@ -95,17 +83,11 @@ export default function ProjectsPage() {
             <Markdown className="prose prose-neutral dark:prose-invert mt-1">
                 {hackathons.description}
               </Markdown>
-             
-            </div>
-           
-           
+            </div>   
           </div>
-          
         ))}
       </div>
-          
-        </div>
-        
-    </section>
+    </div>    
+  </section>
   );
 }
